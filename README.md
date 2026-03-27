@@ -10,6 +10,41 @@ A web application that generates creative text, images, and sentiment analysis f
 It also includes text-to-speech functionality to listen to the generated content.
 
 
+![Demo](demo.gif)
+
+## Architecture
+
+```
+User Input (theme)
+        │
+        ▼
+┌───────────────────┐
+│   Streamlit UI    │  ← app.py
+└───────┬───────────┘
+        │
+   ┌────┴──────────────────────────────┐
+   │                                   │
+   ▼                                   ▼
+text_generation.py             image_generation.py
+(HuggingFace Transformers)     (Stable Diffusion XL via HF API)
+   │                                   │
+   ▼                                   │
+sentiment_analysis.py                  │
+(HuggingFace BERT)                     │
+   │                                   │
+   ▼                                   │
+speech_generation.py                   │
+(gTTS)                                 │
+   │                                   │
+   └────────────────┬──────────────────┘
+                    │
+                    ▼
+           Streamlit renders:
+           text + image + sentiment + audio
+```
+
+Each module is independently responsible for one modality, making the codebase modular and easy to extend.
+
 ## Features
 
 - Generate creative text from a user-defined theme
@@ -46,10 +81,11 @@ multimodal-ai-assistant/
 
 
 ## Installation (Terminal)
-
-python -m venv venv  
-venv\Scripts\activate  
-pip install -r requirements.txt  
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
 
 
 ## Configuration of Hugging Face Token
@@ -81,5 +117,6 @@ Enter a theme in the interface, then click "Generate" to obtain:
 
 ## Author
 
-Adam Ferkous  
-AI & Data Student
+**Adam Ferkous** - AI & Data Student
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/adam-ferkous-ba29a1227)
+
