@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.9+-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![AI](https://img.shields.io/badge/AI-Multimodal-green)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://multimodal-ai-assistant.streamlit.app)
 
 ## Description
 
