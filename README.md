@@ -1,41 +1,83 @@
-# Assistant de création de contenu multimodal
+# Multimodal AI Content Assistant
 
-## Prérequis
-- Python 3.9 ou supérieur
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![AI](https://img.shields.io/badge/AI-Multimodal-green)
 
 ## Description
-Application web permettant de générer un texte créatif, une image et une analyse de sentiment à partir d’un thème.
+
+A web application that generates creative text, images, and sentiment analysis from a given theme using AI models.  
+It also includes text-to-speech functionality to listen to the generated content.
+
+
+## Features
+
+- Generate creative text from a user-defined theme
+- Generate images using Stable Diffusion
+- Perform sentiment analysis on generated text
+- Convert text to speech (audio playback)
+- Interactive web interface built with Streamlit
+
+## Project Structure
+
+multimodal-ai-assistant/
+├── app.py
+├── text_generation.py
+├── image_generation.py
+├── sentiment_analysis.py
+├── speech_generation.py
+├── requirements.txt
+└── README.md
+
+## Prerequisites
+
+- Python 3.9 or higher
+
 
 ## Technologies
-- Python
-- Streamlit (interface web)
-- Hugging Face Transformers (génération de texte et analyse de sentiment)
-- Stable Diffusion XL via Hugging Face (génération d’images)
-- gTTS (Google Text-to-Speech)
 
-## Installation (dans le terminal)
+- Python  
+- Streamlit (web interface)  
+- Hugging Face Transformers (text generation & sentiment analysis)  
+- Stable Diffusion XL via Hugging Face (image generation)  
+- gTTS (Google Text-to-Speech)  
+
+
+## Installation (Terminal)
+
 python -m venv venv  
 venv\Scripts\activate  
 pip install -r requirements.txt  
 
-## Configuration du token Hugging Face
 
-Ce projet utilise l’API Hugging Face pour la génération d’images.
+## Configuration of Hugging Face Token
 
-1. Créer un compte sur https://huggingface.co
-2. Générer un token d’accès
-3. Créer un fichier `.env` à la racine du projet
-4. Ajouter la ligne suivante :
+This project uses the Hugging Face API for image generation.
 
-HF_TOKEN=VOTRE_TOKEN_HUGGINGFACE
+1. Create an account on https://huggingface.co  
+2. Generate an access token  
+3. Create a `.env` file at the root of the project  
+4. Add the following line:
+
+HF_TOKEN=YOUR_HUGGINGFACE_TOKEN
 
 
-## Lancement
+## Run the application
+
 streamlit run app.py
 
-## Utilisation
-Entrer un thème dans l’interface, puis cliquer sur "Générer" pour obtenir :
-- un texte créatif
-- une image générée par IA
-- une analyse de sentiment
-- la possibilité d’écouter la description générée (synthèse vocale)
+
+## Usage
+
+Enter a theme in the interface, then click "Generate" to obtain:
+
+- a creative text  
+- an AI-generated image  
+- a sentiment analysis  
+- the ability to listen to the generated description (text-to-speech)  
+
+
+## Author
+
+Adam Ferkous  
+AI & Data Student
