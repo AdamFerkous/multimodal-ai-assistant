@@ -1,0 +1,8 @@
+streamlit
+transformers
+torch
+diffusers
+pillow
+python-dotenv
+huggingface_hub
+gTTS
