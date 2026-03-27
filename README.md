@@ -20,6 +20,7 @@ It also includes text-to-speech functionality to listen to the generated content
 
 ## Project Structure
 
+```
 multimodal-ai-assistant/
 ├── app.py
 ├── text_generation.py
@@ -28,6 +29,7 @@ multimodal-ai-assistant/
 ├── speech_generation.py
 ├── requirements.txt
 └── README.md
+```
 
 ## Prerequisites
 
