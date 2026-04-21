@@ -11,7 +11,7 @@ def generate_image(prompt):
         raise RuntimeError("HF_TOKEN non défini")
 
     client = InferenceClient(
-        model="stabilityai/stable-diffusion-xl-base-1.0",
+        model="black-forest-labs/FLUX.1-schnell",
         token=token,
         provider="hf-inference"
     )
